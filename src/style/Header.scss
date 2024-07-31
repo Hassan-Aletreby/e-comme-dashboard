@@ -1,0 +1,29 @@
+@import url("./variables.css");
+
+.nav_bar {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  right: 0;
+  height: 40px;
+  background-color: var(--sideback-ground);
+  // background-image: url(../Images/sideback.jpg);
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  z-index: 999;
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  justify-content: flex-end;
+  padding-inline: 50px;
+  margin-block: 0;
+  & .icon {
+    font-size: 18px;
+    color: var(--icon-color);
+  }
+  & span {
+    font-size: 18px;
+    margin-left: 5px;
+  }
+}

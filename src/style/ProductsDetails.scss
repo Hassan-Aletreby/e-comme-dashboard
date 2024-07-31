@@ -1,0 +1,155 @@
+@import url(./variables.css);
+.form-content {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.form-section {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.image-upload-section {
+  flex: 2;
+  margin-top: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.form-group input {
+  padding: 8px;
+  border: 1px solid var(--button-color);
+  border-radius: 8px;
+  width: 100%;
+  outline: none;
+}
+.form-group input::placeholder {
+  font-size: 14px;
+  color: var(--button-color);
+  opacity: 0.3;
+}
+.form-group textarea {
+  height: 100px;
+  padding: 12px;
+  border: 1px solid var(--hover-color);
+  border-radius: 8px;
+  width: 100%;
+  outline: none;
+}
+
+input::placeholder {
+  color: var(--hover-color);
+}
+
+.image_preview {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.image_preview img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 10px;
+  background-color: var(--sideback-ground);
+  padding: 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.upload-box {
+  display: flex;
+  background-color: var(--sideback-ground);
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.upload-box input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.button_container {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  justify-content: center;
+}
+
+.button_details {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--button-color);
+  color: var(--white-color);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 200px;
+}
+
+.button_details:hover {
+  background-color: var(--icon-color);
+}
+
+.message {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.message {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.error-message {
+  color: #fff;
+  background-color: #f44336;
+  border: 1px solid #d32f2f;
+}
+
+.success-message {
+  color: #fff;
+  background-color: #4caf50;
+  border: 1px solid #388e3c;
+}
+
+.message:hover {
+  opacity: 0.9;
+}

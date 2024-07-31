@@ -1,0 +1,53 @@
+@import url(../style/variables.css);
+.chart_container {
+  width: calc(100% - 25px);
+  height: 400px;
+  box-sizing: border-box;
+  margin-block: 50px;
+  background-color: var--sideback-ground();
+  padding: 24px;
+  border: 1px solid var(--text-color);
+  border-radius: 10px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.chart {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
+  justify-content: center;
+}
+
+.chart_wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.chart_container {
+  flex: 1;
+}
+
+.chart_description {
+  flex: 1;
+  max-width: 400px;
+  padding: 24px;
+  margin-block: 30px;
+  line-height: 25px;
+  color: var(--text-color);
+}
+.chart_description p {
+  font-size: 14px;
+}
+.chart_description ul {
+  margin: 0;
+  padding: 0;
+  list-style: circle;
+}/*# sourceMappingURL=charts.css.map */

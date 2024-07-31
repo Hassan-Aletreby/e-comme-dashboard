@@ -1,0 +1,10 @@
+@import url("./variables.css");
+
+.home_content {
+  height: calc(100vh - 179px);
+  color: var(--header-color);
+  align-items: center;
+  text-align: center;
+  padding-top: 10%;
+  // background-image: url(../Images/background3.jpg);
+}

@@ -1,0 +1,133 @@
+@import url("./variables.css");
+
+.login_body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(../Images/wallpaper4.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login_content {
+  background-color: var(--white-color);
+  border-radius: 12px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 700px;
+  height: 400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px;
+  align-items: center;
+  overflow: hidden;
+}
+.login_img {
+  background-image: url(../Images/background4.jpg);
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.login_img h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login_img h3 p {
+  width: 100%;
+}
+.login_img h3 .dashBoard_icon {
+  width: 80%;
+  height: 80%;
+  color: var(--icon-color);
+  border: 2px solid var(--icon-color);
+  border-radius: 8px;
+}
+
+.login_head {
+  color: var(--darkblue-color);
+  text-align: center;
+  font-size: 24px;
+  border-bottom: 1px solid var(--darkblue-color);
+  margin: 0 0 15px 0;
+  padding-bottom: 5px;
+  width: 100%;
+}
+
+.login_form {
+  border-radius: 8px;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: column;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--icon-color);
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: var(--login-color);
+  opacity: 0.7;
+  color: var(--header-color);
+  outline: none;
+}
+
+.login_btn {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--icon-color);
+  color: var(--white-color);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.login_btn:hover {
+  background-color: var(--button-color);
+  color: var(--white-color);
+}
+
+.error {
+  color: var(--danger-color);
+  margin-top: 10px;
+}
+
+.success {
+  color: var(--icon-color);
+  margin-top: 10px;
+}
+
+.login-redirect-button {
+  text-align: center;
+  font-size: 14px;
+}
+
+.login-redirect-button span {
+  cursor: pointer;
+  color: var(--icon-color);
+}

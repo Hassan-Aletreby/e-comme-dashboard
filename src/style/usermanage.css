@@ -1,0 +1,72 @@
+@import url("./variables.css");
+
+.user-list-container {
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid var(--icon-color);
+  border-radius: 12px;
+}
+
+.user-list-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  margin-top: 20px;
+}
+
+.user-list-table th {
+  padding: 12px 16px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+.user-list-table td {
+  padding: 8px;
+  text-align: center;
+  color: var(--button-color);
+  font-size: 14px;
+}
+.user-list-table tr {
+  border-bottom: 1px solid var(--header-color);
+  background-color: var(--white-color);
+}
+.user-list-table tr:last-of-type {
+  border-bottom: none !important;
+}
+
+.user-list-table td img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.user-list-table td:last-child {
+  text-align: center;
+}
+.btns {
+  display: flex;
+}
+.user_btn,
+.add-user-btn {
+  background-color: var(--button-color);
+  border: none;
+  color: var(--white-color);
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.user_btn:hover,
+.add-user-btn:hover {
+  background-color: var(--icon-color);
+  transform: scale(1.09);
+}
+.user-list-table td input {
+  border: 1px solid var(--button-color);
+  padding: 4px 8px;
+}

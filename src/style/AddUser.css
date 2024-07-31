@@ -1,0 +1,46 @@
+@import url(../style/variables.css);
+
+.user-add-container {
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.user-add-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  align-items: center;
+}
+
+.user-add-label {
+  display: flex;
+  flex-direction: column;
+  color: var(--text-color);
+}
+
+.user-add-input {
+  padding: 8px 12px;
+  border: 1px solid var(--icon-color);
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 5px;
+  background-color: transparent;
+  color: var(--text-color);
+  outline: none;
+}
+
+.user-add-button {
+  grid-column: span 2;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--button-color);
+  color: var(--white-color);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.user-add-button:hover {
+  background-color: var(--icon-color);
+}
