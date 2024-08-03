@@ -46,6 +46,16 @@ const Login = () => {
   return (
     <div className="login_body">
       <div className="login_content">
+        <div className="login_img">
+          <h3>
+            <p>Welcome Back To Our DashBoard</p>
+            <MdDashboard className="dashBoard_icon" />
+          </h3>
+          <p>
+            This is a dashboard for an e-commerce platform. You can manage
+            products, <br /> user, orders, and customers here.
+          </p>
+        </div>
         <form className="login_form" onSubmit={handleLogin}>
           <h2 className="login_head">Login</h2>
           <input
@@ -67,16 +77,6 @@ const Login = () => {
           </button>
           {error && <p className="login-error">{error}</p>}
         </form>
-        <div className="login_img">
-          <h3>
-            <p>Welcome Back To Our DashBoard</p>
-            <MdDashboard className="dashBoard_icon" />
-          </h3>
-          <p>
-            This is a dashboard for an e-commerce platform. You can manage
-            products, <br /> user, orders, and customers here.
-          </p>
-        </div>
       </div>
     </div>
   );

@@ -88,14 +88,14 @@ const UserList = () => {
         <tbody>
           {users.map((user) => (
             <tr key={user.id}>
-              <td>{user.id}</td>
-              <td>{user.first_name}</td>
-              <td>{user.last_name}</td>
-              <td>{user.username}</td>
-              <td>{user.email}</td>
-              <td>{user.password}</td>
-              <td>{user.dateOfBirth}</td>
-              <td>
+              <td data-label="ID">{user.id}</td>
+              <td data-label="First Name">{user.first_name}</td>
+              <td data-label="Last Name">{user.last_name}</td>
+              <td data-label="User Name">{user.username}</td>
+              <td data-label="Email">{user.email}</td>
+              <td data-label="Password">{user.password}</td>
+              <td data-label="Date Of Birth">{user.dateOfBirth}</td>
+              <td data-label="Img">
                 {user.user_img ? (
                   <img
                     src={user.user_img}
@@ -108,14 +108,14 @@ const UserList = () => {
                   />
                 ) : null}
               </td>
-              <td>
+              <td data-label="Status">
                 {user.status === "online" ? (
                   <span className="status online">Online</span>
                 ) : (
                   <span className="status offline">Offline</span>
                 )}
               </td>
-              <td>
+              <td data-label="Actions">
                 <div className="btns">
                   <Link to={`/users/edit/${user.id}`} className="user_btn">
                     Edit

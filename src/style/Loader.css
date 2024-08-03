@@ -10,20 +10,18 @@
 }
 
 .spinner {
-  border: 8px solid var(--header-color);
+  width: 65px;
+  height: 65px;
+  border: 8px solid rgba(0, 0, 0, 0.1);
   border-top: 8px solid var(--icon-color);
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 0.5s linear infinite;
+  animation: spin 1.2s linear infinite;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes spin {
   0% {
     transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(90deg);
   }
   100% {
     transform: rotate(360deg);
@@ -31,7 +29,19 @@
 }
 .loading_text {
   margin-top: 20px;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
   color: var(--icon-color);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  font-family: "Roboto", sans-serif;
+  animation: fadeInOut 2s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
 }/*# sourceMappingURL=Loader.css.map */

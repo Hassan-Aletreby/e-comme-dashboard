@@ -8,6 +8,9 @@
   --contentback-ground: #e7e7e3;
   --hover-color: #e7e7e3;
   --danger-color: rgb(184, 2, 2);
+  --blue-color: rgb(14, 14, 197);
+  --yellow-color: rgb(173, 173, 50);
+  --green-color: green;
 }
 
 [data-theme=dark] {

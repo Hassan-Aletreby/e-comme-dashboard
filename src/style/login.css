@@ -131,3 +131,38 @@ input[type="password"] {
   cursor: pointer;
   color: var(--icon-color);
 }
+
+/* ______________________________________________________________________________ */
+@media (max-width: 450px) {
+  .login_body {
+    padding: 10px;
+  }
+  .login_content {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .login_img {
+    display: none !important;
+  }
+
+  .login_form {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .login_head {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .login_btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    padding: 10px 12px;
+  }
+}

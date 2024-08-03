@@ -14,6 +14,7 @@ import Profile from "../Pages/Profile";
 import UserList from "../Pages/UsersManage";
 import UserEdit from "../Pages/UserEdit";
 import UserAdd from "../Pages/AddUser";
+import OrderList from "../Pages/Orders";
 
 function RoutesApp() {
   return (
@@ -32,6 +33,7 @@ function RoutesApp() {
           <Route path="users/edit/:id" element={<UserEdit />} />
           <Route path="users/add" element={<UserAdd />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/orders" element={<OrderList />} />
         </Route>
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />

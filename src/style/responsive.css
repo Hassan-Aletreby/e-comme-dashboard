@@ -1,0 +1,67 @@
+@media (max-width: 480px) {
+  .main_container {
+    padding: 10px !important;
+  }
+  .sidebar {
+    width: 40px !important;
+  }
+  .sidebar.visible {
+    transform: translateX(0);
+  }
+  .content {
+    width: calc(100vw - 40px) !important;
+    margin-left: 40px !important;
+  }
+  .sidebar_toggle {
+    display: none !important;
+  }
+  .sidebar.collapsed .menu_links li .icon {
+    padding-left: 5px !important;
+    width: 25px !important;
+    height: 25px !important;
+  }
+  .nav_bar {
+    display: none !important;
+  }
+  .form-content {
+    flex-direction: column !important;
+  }
+  .form-row {
+    flex-direction: column !important;
+  }
+  .user-add-form {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .user-add-button {
+    margin-top: 10px;
+  }
+  .chart_wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .chart_container,
+  .chart_description {
+    margin-block: 0px !important;
+    padding: 10px !important;
+  }
+  .user-edit-form {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .user-edit-container {
+    padding: 5px !important;
+  }
+  .user-edit-label {
+    width: 100% !important;
+  }
+  .user-edit-button,
+  .user-add-button,
+  .button-container button {
+    width: 100% !important;
+  }
+  .button_details {
+    font-size: 14px !important;
+    padding: 4px 8px;
+  }
+}/*# sourceMappingURL=responsive.css.map */

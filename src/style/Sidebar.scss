@@ -1,5 +1,7 @@
 @import url("./variables.css");
-
+* {
+  box-sizing: border-box;
+}
 .sidebar {
   position: fixed !important;
   top: 0;
@@ -105,36 +107,29 @@
       }
 
       & li {
-        line-height: 30px;
         transition: all 0.3s ease-in-out;
-        border-radius: 8px;
+        border-radius: 0 4px 4px 0 !important;
+        padding: 4px;
+        margin-block: 6px;
         & a {
           font-size: 14px;
           font-weight: 700;
           color: var(--text-color);
           cursor: pointer;
           transition: all 0.3s ease-in-out;
-          padding: 4px;
-          border-radius: 5px;
           text-decoration: none;
           & .icon {
-            font-size: 20px;
-            padding: 8px;
             color: var(--icon-color);
-            width: 40px;
-            height: 40px;
-            border-radius: 8px;
-            transition: all 0.2s ease-in-out;
-          }
-          & .icon1 {
-            color: var(--icon-color);
-            width: 18px;
-            height: 18px;
+            width: 20px;
+            height: 20px;
+            transition: all 0.1s ease-in-out;
           }
         }
       }
       & li:hover {
         background-color: var(--hover-color);
+        transform: scale(0.9);
+        border-radius: 0 4px 4px 0;
       }
     }
   }
@@ -142,11 +137,6 @@
   &.collapsed {
     width: 50px;
     padding: 10px !important;
-
-    & .menu_links li {
-      margin: 20px 0;
-      font-size: 22px;
-    }
   }
 }
 
@@ -162,7 +152,6 @@
   transform: translateY(-50%);
   background-color: var(--icon-color);
   color: var(--white-color);
-  padding: 2px 4px;
   border-radius: 8px;
   opacity: 0;
   visibility: hidden;
@@ -170,7 +159,11 @@
   font-size: 12px;
   font-weight: 500;
   white-space: nowrap;
-  max-width: 150px;
+  max-width: 100px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding: 2px 4px;
   overflow: hidden;
   text-overflow: ellipsis;
   z-index: 99999999;
@@ -214,42 +207,9 @@
 }
 // ________________________________________________________________________________________________________
 
-.products-menu,
-.users-menu {
-  position: relative;
+.menu_links li.active {
+  border-left: 3px solid var(--icon-color);
+  background-color: var(--hover-color);
 }
 
-.sub-menu {
-  display: none;
-  position: absolute;
-  left: 100%;
-  top: 0;
-  background-color: var(--sideback-ground);
-  border-radius: 8px;
-  padding: 5px 10px;
-  list-style: none;
-  width: max-content;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-}
-
-.products-menu:hover .sub-menu,
-.users-menu:hover .sub-menu {
-  display: block;
-}
-
-.sub-menu a {
-  padding: 5px 10px;
-  border-radius: 8px;
-  color: var(--text-color);
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 10px;
-}
-
-.sub-menu a:hover {
-  background-color: var(--hover-background);
-  color: var(--hover-text-color);
-}
+// ___________________________________________________________________________________________

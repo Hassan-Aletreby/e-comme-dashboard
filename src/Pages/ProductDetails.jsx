@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Loader from "../Components/Loader";
 import "../style/ProductsDetails.css";
-import Title from "../Components/Tittle.jsx";
+import Title from "../Components/Tittle.jsx"; // Corrected import name
 import ConfirmationModal from "../Components/ConfirmationModal";
 import axiosInstance from "../api/axiosInstance";
 
@@ -13,7 +13,7 @@ const ProductDetails = () => {
   const [formData, setFormData] = useState({
     title: "",
     price: "",
-    description: "",
+    description: [],
     reviews: "",
     category: "",
     brand: "",
@@ -37,9 +37,6 @@ const ProductDetails = () => {
             id: `eq.${id}`,
           },
         });
-        // const response = await axiosInstance.get(
-        //   `/rest/v1/products?id=eq.${id}`
-        // );
         const data = response.data[0];
 
         if (data) {
@@ -47,7 +44,7 @@ const ProductDetails = () => {
           setFormData({
             title: data.title,
             price: data.price,
-            description: data.description,
+            description: data.description || [],
             reviews: data.reviews,
             category: data.category,
             brand: data.brand,
@@ -300,13 +297,23 @@ const ProductDetails = () => {
             <div className="form-row">
               <div className="form-group full-width">
                 <label htmlFor="description">Description:</label>
-                <textarea
-                  id="description"
-                  name="description"
-                  value={formData.description}
-                  onChange={handleChange}
-                  placeholder="Enter Product Description ..."
-                />
+                {formData.description.map((desc, index) => (
+                  <textarea
+                    key={index}
+                    id={`description-${index}`}
+                    name={`description-${index}`}
+                    value={desc}
+                    onChange={(e) =>
+                      setFormData((prev) => ({
+                        ...prev,
+                        description: prev.description.map((d, i) =>
+                          i === index ? e.target.value : d
+                        ),
+                      }))
+                    }
+                    placeholder={`Enter Product Description ${index + 1} ...`}
+                  />
+                ))}
               </div>
             </div>
             <div className="button_container">
